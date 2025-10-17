@@ -7,5 +7,4 @@ def test_localization_link(browser):
     time.sleep(60)
 
     assert browser.find_element(By.CSS_SELECTOR, '[class*="btn-add-to-basket"]'), \
-
         "Кнопка добавления товара в корзину не найдена"
