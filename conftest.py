@@ -16,7 +16,6 @@ def browser(request):
     browser_name = request.config.getoption("browser_name")
     browser = None
     language = request.config.getoption("language")
-    # link = f"https://selenium1py.pythonanywhere.com/{language}/catalogue/coders-at-work_207/"
 
     if browser_name == "chrome":
         print("\nstart chrome browser for test..")
@@ -32,6 +31,5 @@ def browser(request):
         raise pytest.UsageError("--browser_name should be chrome or firefox")
 
     yield browser
-    # yield browser.get(link)
     print("\nquit browser..")
     browser.quit()
